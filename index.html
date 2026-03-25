@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loane Hurt - Profil Professionnel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-light: #f8f9fa;
+      --gray-light: #e9ecef;
+      --gray-mid: #dee2e6;
+      --gray-main: #6c757d;
+      --gray-dark: #343a40;
+      --black: #212529;
+      --white: #ffffff;
+      --text-main: #495057;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--black);
+      min-height: 100vh;
+    }
+
+    /* ── HERO ─────────────────────────────── */
+    .hero {
+      background: linear-gradient(135deg, #495057 0%, #212529 100%);
+      text-align: center;
+      padding: 80px 24px 70px;
+      position: relative;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--white);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      margin: 0 auto 24px;
+      position: relative;
+      z-index: 1;
+      display: block;
+      background-color: var(--gray-mid);
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .hero h1 span {
+      font-weight: 400;
+      color: var(--gray-mid);
+    }
+
+    .hero .tagline {
+      font-size: 1.1rem;
+      color: var(--gray-light);
+      font-weight: 300;
+      max-width: 600px;
+      margin: 0 auto 32px;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      padding: 12px 30px;
+      border-radius: 4px; /* Un peu plus carré pour le style gris */
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .btn-white {
+      background: var(--white);
+      color: var(--black);
+    }
+
+    .btn-white:hover {
+      background: var(--gray-light);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 1px solid var(--white);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.1);
+      transform: translateY(-2px);
+    }
+
+    .btn svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    /* ── SECTIONS ─────────────────────────── */
+    .sections {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 60px 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* Deux colonnes sur desktop */
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--white);
+      padding: 40px;
+      border: 1px solid var(--gray-mid);
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      border-color: var(--gray-main);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .card .icon {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      display: block;
+      filter: grayscale(100%); /* Icônes en noir et blanc pour le style */
+    }
+
+    .card h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      color: var(--black);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .card p {
+      color: var(--text-main);
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+
+    /* ── SOCIAL ───────────────────────────── */
+    .social-section {
+      text-align: center;
+      padding: 40px 24px 80px;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--black);
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 2px solid var(--gray-mid);
+      padding-bottom: 4px;
+      transition: all 0.3s;
+    }
+
+    .social-link:hover {
+      border-color: var(--black);
+      opacity: 0.7;
+    }
+
+    /* ── FOOTER ───────────────────────────── */
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.8rem;
+      color: var(--gray-main);
+      border-top: 1px solid var(--gray-mid);
+      background: var(--white);
+    }
+
+    /* ── RESPONSIVE ───────────────────────── */
+    @media (max-width: 768px) {
+      .sections { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <img src="profile.png" alt="Loane Hurt" class="profile-pic">
+    <h1>Loane <span>Hurt</span></h1>
+    <p class="tagline">
+      Étudiante à l'ICN Business School • Alternante chez Darty • Passionnée de Cinéma
+    </p>
+    <div class="hero-btns">
+      <a href="https://www.linkedin.com/in/loane-hurt-5a631932a/" target="_blank" class="btn btn-white">
+        LinkedIn
+      </a>
+      <a href="https://www.lewagon.com" target="_blank" class="btn btn-outline">
+        Le Wagon
+      </a>
+    </div>
+  </section>
+
+  <div class="sections">
+
+    <div class="card">
+      <span class="icon">🎬</span>
+      <h2>Cinéma</h2>
+      <p>
+        Une passion qui nourrit ma créativité. Je vois chaque film comme une leçon de perspective et une source d'inspiration pour comprendre le monde qui m'entoure.
+      </p>
+    </div>
+
+    <div class="card">
+      <span class="icon">💼</span>
+      <h2>Darty</h2>
+      <p>
+        Mon alternance en tant que vendeuse me permet d'affiner mon sens du contact et ma rigueur commerciale au sein d'un leader de la distribution.
+      </p>
+    </div>
+
+    <div class="card">
+      <span class="icon">🎓</span>
+      <h2>Formation</h2>
+      <p>
+        Actuellement à l'ICN Business School, j'allie théorie académique et expérience terrain pour devenir une professionnelle polyvalente.
+      </p>
+    </div>
+
+    <div class="card">
+      <span class="icon">⚙️</span>
+      <h2>Digital</h2>
+      <p>
+        Initiée au développement web via Le Wagon, je m'intéresse de près aux nouvelles technologies et à leur impact sur le business moderne.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="social-section">
+    <a href="https://www.linkedin.com/in/loane-hurt-5a631932a/" target="_blank" class="social-link">
+      Suivre mon parcours sur LinkedIn →
+    </a>
+  </div>
+
+  <footer>
+    &copy; 2024 Loane Hurt — Réalisé avec rigueur et passion.
+  </footer>
+
+</body>
+</html>
